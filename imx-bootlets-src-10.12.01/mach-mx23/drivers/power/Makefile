@@ -19,7 +19,7 @@ STRIP	= $(CROSS_COMPILE)strip
 OBJCOPY	= $(CROSS_COMPILE)objcopy
 OBJDUMP	= $(CROSS_COMPILE)o
 
-CFLAGS 	= -Wall -ffunction-sections $(INCLUDEDIRS) -I./ -O -DSTMP378x
+CFLAGS 	= -Wall -ffunction-sections $(INCLUDEDIRS) -I./ -O -fno-stack-protector -DSTMP378x
 
 lib_objs := src/ddi_power_init.o  src/ddi_power.o src/ddi_power_handoff.o \
 	src/ddi_power_battery.o src/ddi_power_5v_detect.o
